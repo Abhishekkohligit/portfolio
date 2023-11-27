@@ -13,7 +13,7 @@
 	--color-white: rgba(250, 250, 250);
 	--text-color-second: rgba(38, 37, 37);
 	--first-color: rgba(110, 87, 224);
-	--first-shadow: rgba(0, 0, 0, 0.1);
+	--first-shadow: rgba(0, 0, 0, 0.3);
 
 	--box-color: #fff;
 	--nav-color: #fff;
@@ -462,6 +462,61 @@ i {
 }
 
 /* projects */
+.project-container {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.project-box {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 30%;
+	height: 250px;
+	background: transparent;
+	border: 2px solid #fff;
+	border-radius: 20px;
+	box-shadow: 1px 8px 10px 2px var(--first-shadow);
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.project-box > i {
+	font-size: 50px;
+	color: #8749f2;
+	margin-bottom: 25px;
+}
+.project-box label {
+	font-size: 15px;
+	color: var(--text-color);
+}
+
+/* project box hover effect */
+.project-box::after {
+	content: "";
+	position: absolute;
+	bottom: -100%;
+	background: #8749f2;
+	width: 100%;
+	height: 100%;
+	transition: 0.3s;
+	z-index: 0.1;
+}
+
+.project-box:hover.project-box::after {
+	bottom: 0;
+}
+.project-box:hover.project-box i,
+.project-box:hover.project-box > h3,
+.project-box:hover.project-box > label {
+	color: #fff;
+	z-index: 2;
+}
 
 /* Keyframes marker */
 @keyframes iconSlide {
