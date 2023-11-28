@@ -28,6 +28,7 @@ var typingEffect = new Typed(".typedText", {
 	backDelay: 2500,
 });
 
+
 // scroll animation
 const sr = ScrollReveal({
 	origin: "top",
