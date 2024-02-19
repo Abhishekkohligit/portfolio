@@ -245,11 +245,18 @@ i {
 /* social icons */
 
 .social_icons {
-	display: flex;
+	/* display: flex; */
 	margin-top: 30px;
 	margin-left: 5px;
 	gap: 32px;
 	position: relative;
+}
+.social_icons .social_icons_container {
+	/* background-color: red; */
+	width: 200px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 .social_icons .icon {
 	display: flex;
@@ -579,6 +586,11 @@ i {
 	flex-direction: column;
 	width: 100%;
 	gap: 10px;
+	& #contact-form {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
 }
 
 .form-inputs {

@@ -28,7 +28,6 @@ var typingEffect = new Typed(".typedText", {
 	backDelay: 2500,
 });
 
-
 // scroll animation
 const sr = ScrollReveal({
 	origin: "top",
@@ -65,24 +64,47 @@ srRight.reveal(".skill", { delay: 100 });
 srRight.reveal(".skill-box", { delay: 100 });
 
 // active section
-
 const sections = document.querySelectorAll(".section[id]");
-function scrollActive() {
+console.log(sections);
+window.addEventListener("scroll", (e) => {
+	// console.log(e.clientX);
 	const scrollY = window.scrollY;
 	sections.forEach((current) => {
-		const sectionHeight = current.offsetHeight;
-		const sectionTop = current.offsetTop - 50;
-		const sectionId = current.getAttribute("id");
+		const sectionHeight = current.offsetHeight,
+			sectionTop = current.offsetTop - 50,
+			sectionId = current.getAttribute("id");
+		// console;
 
 		if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
 			document
-				.querySelector(".nav-menu ahref*=" + sectionId + "]")
-				.classList.add("active-link");
+				// .getElementById(`.nav-menu #${sectionId}`)
+				.querySelector(".nav-menu a[href*=" + sectionId + "]")
+				.classList.add("active_link");
 		} else {
 			document
-				.querySelector(".nav-menu ahref*=" + sectionId + "]")
-				.classList.remove("active-link");
+				.querySelector(".nav-menu a[href*=" + sectionId + "]")
+				.classList.remove("active_link");
 		}
 	});
-}
-window.addEventListener("scroll", scrollActive);
+});
+
+/*  working code */
+// const sections = document.querySelectorAll(".section");
+// const navLinks = document.querySelectorAll(".nav-link");
+
+// window.addEventListener("scroll", (e) => {
+// 	// console.log(e.clientX);
+// 	const scrollY = window.scrollY;
+// 	sections.forEach((section, i) => {
+// 		const sectionHeight = section.offsetHeight;
+// 		const sectionTop = section.offsetTop - 50;
+// 		const sectionBottom = sectionTop + sectionHeight;
+
+// 		if (scrollY > sectionTop && scrollY <= sectionBottom) {
+// 			// console.log(section.id, scrollY);
+// 			navLinks[i].classList.add("active_link");
+// 		} else {
+// 			navLinks[i].classList.remove("active_link");
+// 		}
+// 	});
+// });
