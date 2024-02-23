@@ -504,13 +504,23 @@ i {
 	align-items: center;
 	flex-direction: column;
 	width: 30%;
-	height: 250px;
+	height: 350px;
 	background: transparent;
 	border: 2px solid #fff;
 	border-radius: 20px;
 	box-shadow: 1px 8px 10px 2px var(--first-shadow);
 	overflow: hidden;
 	cursor: pointer;
+}
+
+.project-pic {
+	background-image: url("./Estate_Pic.jpg");
+	width: 300px;
+	height: 180px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: green;
 }
 .project-box-links {
 	display: flex;
@@ -539,12 +549,6 @@ i {
 	color: #8749f2;
 }
 
-.project-box-ind-link:hover > i,
-.project-box-ind-link:hover > a {
-	color: #444444;
-	border-bottom: 2px solid #444444;
-}
-
 .project-box > i {
 	font-size: 50px;
 	color: #8749f2;
@@ -560,10 +564,28 @@ i {
 	text-align: center;
 	text-wrap: balance;
 }
+/* project box hover effect 
+*/
 
-/* project box hover effect */
+.project-box:hover .project-pic {
+	background-image: url("./Estate_GIf.gif");
+}
+.project-box:hover.project-box::after {
+	bottom: 0;
+	z-index: -1;
+}
+.project-box:hover.project-box h3,
+.project-box:hover.project-box label,
+.project-box:hover.project-box i {
+	color: #f4f4f4;
+}
+.project-box-ind-link:hover > i,
+.project-box-ind-link:hover > a {
+	border-bottom: 2px solid #f4f4f4;
+}
 
-.contact-info::after {
+.contact-info::after,
+.project-box::after {
 	content: "";
 	position: absolute;
 	bottom: -100%;
@@ -579,6 +601,9 @@ i {
 .contact-info:hover.contact-info::after {
 	bottom: 0;
 }
+/* .project-box:hover.project-box::after {
+	bottom: 0;
+} */
 
 /* contact info */
 .contact-info {
