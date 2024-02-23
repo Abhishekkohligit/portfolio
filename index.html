@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -49,7 +50,7 @@
 	</head>
 	<body>
 		<!-- Nav menu -->
-		<div clas="s" ="container">
+		<div class="container">
 			<nav id="header">
 				<div class="nav-logo">
 					<p class="nav-name">Abhishek</p>
@@ -97,14 +98,15 @@
 						</div>
 						<div class="text-info">
 							<p>
-								My name is Abhishek! I&apos;m a Frontend-developer, Data Analyst
-								& Poker Dealer
+								My name is Abhishek!<br> I&apos;m a FrontEnd Developer, Data Analyst
+								
 							</p>
 						</div>
 						<div class="text-btn">
-							<button class="btn hire-btn">Hire Me</button>
-							<button class="btn">
-								Download CV <i class="uil uil-file"></i>
+							
+							<button class="btn download-btn">
+								<a href="./Abhishek_Kohli_1.docx" target="_blank">
+								Download CV <i class="uil uil-file"></i></a>
 							</button>
 						</div>
 						<div class="social_icons">
@@ -157,7 +159,10 @@
 										Data Analyst & a Poker Dealer
 									</p>
 								</figure>
-								<button class="about-me-btn">Hire Me</button>
+								<button class="about-me-btn">
+								<a href="./Abhishek_Kohli_1.docx" target="_blank">
+								Download CV <i class="uil uil-file"></i></a>
+							</button>
 							</div>
 						</div>
 						<div class="skill">
@@ -221,14 +226,33 @@
 					<div class="project-container">
 						<div class="project-box">
 							<i class="uil uil-briefcase"></i>
-							<h3>Projects</h3>
-							<label>2 Fullstack</label>
+							<h3>Estate Website</h3>
+							<label>This is a MERN Project for Property Managment company</label>
+							<div class="project-box-links">
+							<div class="project-box-ind-link">
+								<a
+									class="icon"
+									href="/"
+									target="_blank"
+									><i class="uil uil-github"></i
+								></a>
+								
+							</div>
+							<div class="project-box-ind-link">
+								<a
+									class="icon"
+									href="/"
+									target="_blank"
+									>
+									<i class="material-symbols-outlined">
+										live_tv
+									</i></a>
+
+							</div>
 						</div>
-						<div class="project-box">
-							<i class="uil uil-briefcase"></i>
-							<h3>Projects</h3>
-							<label>2 Fullstack</label>
 						</div>
+				
+						
 					</div>
 				</section>
 				<section class="section" id="contact">
@@ -284,15 +308,24 @@
 										<i class="uil uil-message"></i>
 									</div>
 								</form> -->
+
+
 								<form id="contact-form">
-									<input type="hidden" name="contact_number" />
-									<label>Name</label>
-									<input type="text" name="name" />
-									<label>Email</label>
-									<input type="email" name="email" />
-									<label>Message</label>
-									<textarea name="message"></textarea>
-									<input type="submit" value="Send" />
+									<div class="form-inputs">
+										<input type="text" class="input-field" name="name" placeholder="Your name"/>
+										<input type="email" class="input-field" name="email" placeholder="Your Email" />
+
+									</div>
+									<div class="text-area">
+										<input type="text" class="input-subject" name="subject" placeholder="Subject" />
+											<textarea name="message" placeholder="Your message" ></textarea>
+										
+										
+									</div>
+									<!-- <input type="submit" value="Send" /> -->
+										<div class="form-button">
+									<button type="submit" class="btn"><i class="uil uil-message"></i> Send </button>
+										</div>
 								</form>
 							</div>
 						</div>

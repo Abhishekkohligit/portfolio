@@ -232,6 +232,11 @@ body.dark #moon {
 	background: #8749f2;
 	font-weight: 500;
 	transition: all 0.5s ease;
+
+	& a {
+		text-decoration: none;
+		color: #f4f4f4;
+	}
 }
 
 .btn i {
@@ -393,6 +398,10 @@ i {
 	margin-top: 20px;
 	font-weight: 500;
 	transition: all 0.5s ease;
+	& a {
+		text-decoration: none;
+		color: #fff;
+	}
 }
 
 /* Skill */
@@ -475,6 +484,11 @@ i {
 }
 
 /* projects */
+
+.material-symbols-outlined {
+	font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
 .project-container {
 	display: flex;
 	width: 100%;
@@ -498,6 +512,38 @@ i {
 	overflow: hidden;
 	cursor: pointer;
 }
+.project-box-links {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: flex-end;
+	/* background-color: red; */
+	justify-content: center;
+	gap: 20px;
+}
+
+.project-box-ind-link {
+	display: flex;
+	/* background-color: green; */
+	flex-direction: row;
+	gap: 3px;
+	align-items: center;
+	justify-content: center;
+	color: #8749f2;
+	text-decoration: none;
+}
+.project-box-ind-link > i,
+.project-box-ind-link > a {
+	text-decoration: none;
+	color: #8749f2;
+}
+
+.project-box-ind-link:hover > i,
+.project-box-ind-link:hover > a {
+	color: #444444;
+	border-bottom: 2px solid #444444;
+}
 
 .project-box > i {
 	font-size: 50px;
@@ -511,10 +557,12 @@ i {
 .project-box label {
 	font-size: 15px;
 	color: var(--text-color);
+	text-align: center;
+	text-wrap: balance;
 }
 
 /* project box hover effect */
-.project-box::after,
+
 .contact-info::after {
 	content: "";
 	position: absolute;
@@ -527,15 +575,9 @@ i {
 }
 
 /* .contact-info */
-.project-box:hover.project-box::after,
+
 .contact-info:hover.contact-info::after {
 	bottom: 0;
-}
-.project-box:hover.project-box i,
-.project-box:hover.project-box > h3,
-.project-box:hover.project-box > label {
-	color: #fff;
-	z-index: 2;
 }
 
 /* contact info */
@@ -693,22 +735,22 @@ footer {
 /* Keyframes marker */
 @keyframes iconSlide {
 	33% {
-		border: 2px solid #e6d12eaf;
+		border: 5px solid #e6d12eaf;
 		left: 19px;
 		top: 50%;
 	}
 	66% {
-		border: 2px solid #2ee68aad;
+		border: 5px solid #2ee68aad;
 		left: 86px;
 		top: 50%;
 	}
 	100% {
-		border: 2px solid rgba(49, 46, 230, 0.699);
+		border: 5px solid rgba(49, 46, 230, 0.699);
 		left: 135px;
 		top: 50%;
 	}
 	100% {
-		border: 2px solid rgba(230, 46, 61, 0.692);
+		border: 5px solid rgba(230, 46, 61, 0.692);
 		left: 170px;
 		top: 50%;
 	}

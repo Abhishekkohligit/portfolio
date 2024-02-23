@@ -20,7 +20,7 @@ toggleSwitch.addEventListener("click", () => {
 // type effect
 
 var typingEffect = new Typed(".typedText", {
-	strings: ["Web Developer", "Data Analyst", "Poker Dealer", "Dad"],
+	strings: ["FrontEnd Dev", "Data Analyst", "Poker Dealer", "Dad"],
 
 	loop: true,
 	typeSpeed: 100,
@@ -64,47 +64,47 @@ srRight.reveal(".skill", { delay: 100 });
 srRight.reveal(".skill-box", { delay: 100 });
 
 // active section
-const sections = document.querySelectorAll(".section[id]");
-console.log(sections);
-window.addEventListener("scroll", (e) => {
-	// console.log(e.clientX);
-	const scrollY = window.scrollY;
-	sections.forEach((current) => {
-		const sectionHeight = current.offsetHeight,
-			sectionTop = current.offsetTop - 50,
-			sectionId = current.getAttribute("id");
-		// console;
-
-		if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-			document
-				// .getElementById(`.nav-menu #${sectionId}`)
-				.querySelector(".nav-menu a[href*=" + sectionId + "]")
-				.classList.add("active_link");
-		} else {
-			document
-				.querySelector(".nav-menu a[href*=" + sectionId + "]")
-				.classList.remove("active_link");
-		}
-	});
-});
-
-/*  working code */
-// const sections = document.querySelectorAll(".section");
-// const navLinks = document.querySelectorAll(".nav-link");
-
+// const sections = document.querySelectorAll(".section[id]");
+// // console.log(sections);
 // window.addEventListener("scroll", (e) => {
 // 	// console.log(e.clientX);
 // 	const scrollY = window.scrollY;
-// 	sections.forEach((section, i) => {
-// 		const sectionHeight = section.offsetHeight;
-// 		const sectionTop = section.offsetTop - 50;
-// 		const sectionBottom = sectionTop + sectionHeight;
+// 	sections.forEach((current) => {
+// 		const sectionHeight = current.offsetHeight,
+// 			sectionTop = current.offsetTop - 10,
+// 			sectionId = current.getAttribute("id");
+// 		// console;
 
-// 		if (scrollY > sectionTop && scrollY <= sectionBottom) {
-// 			// console.log(section.id, scrollY);
-// 			navLinks[i].classList.add("active_link");
+// 		if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+// 			document
+// 				// .getElementById(`.nav-menu #${sectionId}`)
+// 				.querySelector(".nav-menu a[href*=" + sectionId + "]")
+// 				.classList.add("active_link");
 // 		} else {
-// 			navLinks[i].classList.remove("active_link");
+// 			document
+// 				.querySelector(".nav-menu a[href*=" + sectionId + "]")
+// 				.classList.remove("active_link");
 // 		}
 // 	});
 // });
+
+/*  working code */
+const sections = document.querySelectorAll(".section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", (e) => {
+	// console.log(e.clientX);
+	const scrollY = window.scrollY;
+	sections.forEach((section, i) => {
+		const sectionHeight = section.offsetHeight;
+		const sectionTop = section.offsetTop - 100;
+		const sectionBottom = sectionTop + sectionHeight;
+
+		if (scrollY > sectionTop && scrollY <= sectionBottom) {
+			// console.log(section.id, scrollY);
+			navLinks[i].classList.add("active_link");
+		} else {
+			navLinks[i].classList.remove("active_link");
+		}
+	});
+});
