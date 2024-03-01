@@ -503,18 +503,32 @@ i {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	width: 30%;
-	height: 350px;
+	width: 35%;
+	height: 380px;
 	background: transparent;
 	border: 2px solid #fff;
 	border-radius: 20px;
 	box-shadow: 1px 8px 10px 2px var(--first-shadow);
 	overflow: hidden;
 	cursor: pointer;
+	padding: 0 5px;
+}
+.code {
+	text-decoration: underline;
+	font-style: italic;
 }
 
-.project-pic {
+.project-pic-1 {
 	background-image: url("./Estate_Pic.jpg");
+	width: 300px;
+	height: 180px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: green;
+}
+.project-pic-2 {
+	background-image: url("./VeesurveDemo.jpg");
 	width: 300px;
 	height: 180px;
 	background-size: contain;
@@ -567,8 +581,11 @@ i {
 /* project box hover effect 
 */
 
-.project-box:hover .project-pic {
+.project-box:hover .project-pic-1 {
 	background-image: url("./Estate_GIf.gif");
+}
+.project-box:hover .project-pic-2 {
+	background-image: url("./VeesurveDemoGIF.gif");
 }
 .project-box:hover.project-box::after {
 	bottom: 0;
@@ -760,17 +777,17 @@ footer {
 /* Keyframes marker */
 @keyframes iconSlide {
 	33% {
-		border: 5px solid #e6d12eaf;
+		border: 3.5px solid #e6d12eaf;
 		left: 19px;
 		top: 50%;
 	}
 	66% {
-		border: 5px solid #2ee68aad;
+		border: 3.5px solid #2ee68aad;
 		left: 86px;
 		top: 50%;
 	}
 	100% {
-		border: 5px solid rgba(49, 46, 230, 0.699);
+		border: 3.5px solid rgba(49, 46, 230, 0.699);
 		left: 135px;
 		top: 50%;
 	}
